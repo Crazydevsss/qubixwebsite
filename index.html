@@ -3,458 +3,348 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Qubix Interactive</title>
 
-  <link rel="stylesheet" href="style.css" />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <nav class="nav">
+    <a class="brand" href="#home">
+      <div class="brand-mark">Q</div>
+      <span>Qubix</span>
+    </a>
 
-<nav class="navbar">
-  <div class="brand">
-    <img src="assets/logo.png" alt="Qubix Logo">
-    <span>QUBIX</span>
-  </div>
-
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <div class="dropdown">
-
-  <button class="dropdown-btn">
-    Team
-    <i class="fas fa-chevron-down"></i>
-  </button>
-
-  <div class="dropdown-content">
-
-    <a href="#studio-team">Studio Team</a>
-
-    <a href="#development-team">Development Team</a>
-</div>
-
-</div>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <a href="https://discord.gg/YOURINVITE" target="_blank" class="nav-btn">
-    Join Discord
-  </a>
-</nav>
-
-<section id="home" class="hero">
-  <div class="hero-glow"></div>
-
-  <div class="hero-content">
-    <p class="eyebrow">QUBIX INTERACTIVE</p>
-
-    <h1>Redefining Roblox Design and Development</h1>
-
-    <p class="hero-desc">
-      A modern interactive studio focused on premium Roblox experiences,
-      creative teams, and community-driven projects.
-    </p>
-
-    <div class="buttons">
-      <a href="#projects" class="btn primary">Explore Projects</a>
-      <a href="#studio-team" class="btn secondary">Meet The Team</a>
-    </div>
-  </div>
-</section>
-
-<section class="stats">
-  <div>
-    <h2>2026</h2>
-    <p>Founded</p>
-  </div>
-
-  <div>
-    <h2>5+</h2>
-    <p>Active Projects</p>
-  </div>
-
-  <div>
-    <h2>25+</h2>
-    <p>Creative Members</p>
-  </div>
-
-  <div>
-    <h2>In progress</h2>
-    <p>Network Reach</p>
-  </div>
-</section>
-
-<section id="projects" class="featured">
-  <div class="featured-text">
-    <p class="eyebrow purple">FEATURED EXPERIENCE</p>
-
-    <h2>Let Me Bake</h2>
-
-    <p>
-      A cozy baking simulator built around progression, creativity,
-      upgrades, shops, and long-term player engagement.
-    </p>
-
-    <div class="mini-stats">
-      <div>
-        <h3>Beta</h3>
-        <span>Status</span>
-      </div>
-
-      <div>
-        <h3>2026</h3>
-        <span>Release Window</span>
-      </div>
-
-      <div>
-        <h3>Qubix</h3>
-        <span>Studio</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-showcase">
-    <img src="assets/lmb.png" alt="Let Me Bake Banner">
-
-    <div class="project-overlay"></div>
-
-    <div class="coming-soon">COMING SOON</div>
-
-    <div class="project-content">
-      <p class="project-label">RELEASING ON JUNE 17 2026</p>
-
-      <h3>Let Me Bake</h3>
-
-      <p>
-        Premium Roblox baking experience currently in development by Qubix Interactive.
-      </p>
-
-      <div class="project-actions">
-        <a href="https://discord.gg/YOURINVITE" target="_blank">
-          <i class="fab fa-discord"></i>
-          Discord
-        </a>
-
-        <a href="https://www.roblox.com/games/YOURGAMEID" target="_blank">
-          <i class="fas fa-cube"></i>
-          Roblox
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="library">
-  <p class="eyebrow purple">PROJECT LIBRARY</p>
-
-  <h2>Experiences Built for Scale</h2>
-
-  <p class="library-desc">
-    A collection of premium Roblox experiences focused on gameplay,
-    progression, replayability, and long-term player retention.
-  </p>
-
-<div class="card featured-card">
-
-  <!-- BANNER -->
-  <img src="assets/lmb.png" class="project-banner">
-
-  <!-- OVERLAY -->
-  <div class="project-fade"></div>
-
-  <!-- STATUS -->
-  <div class="project-badge in-progress">
-    COMING JUNE 17 2026
-  </div>
-
-  <!-- CONTENT -->
-  <div class="project-info">
-    <h3>Let Me Bake</h3>
-
-    <p>
-      Cozy baking simulator focused on progression,
-      upgrades, recipes, shops, and creativity.
-    </p>
-
-    <!-- TAGS -->
-    <div class="card-tags">
-      <span>Simulation</span>
-      <span>Tycoon</span>
-      <span>Cozy</span>
+    <div class="nav-links">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About us</a>
+      <a href="game.html">Experiences</a>
     </div>
 
-    <!-- BUTTONS -->
-    <div class="project-buttons">
-      <a href="https://discord.gg/YOURINVITE" target="_blank">
-        <i class="fab fa-discord"></i>
-        Discord
-      </a>
-
-      <a href="#">
-        <i class="fas fa-gamepad"></i>
-        View Project
-      </a>
+    <div class="nav-actions">
+      <a class="icon-link" href="#">𝕏</a>
+      <a class="icon-link" href="#">◆</a>
+      <a class="btn btn-primary" href="#contact">Contact Us ›</a>
     </div>
-  </div>
+  </nav>
 
-</div>
+  <main id="home" class="hero">
+    <div class="container hero-content">
 
-    <div class="card">
+      <section class="hero-text">
+        <div class="eyebrow">Qubix Interactive</div>
 
-      <div class="project-badge coming-soon">
-        <span class="dot"></span>
-        COMING SOON
-      </div>
+        <h1>
+          Unleashing a<br>
+          New Era of<br>
+          <span class="roblox-word">R<span class="tilt-square"></span>BLOX</span><br>
+          Experiences <span class="spark">✦</span>
+        </h1>
 
-      <h3>Grenade Battles</h3>
+        <p>
+          Building immersive Roblox experiences, growing communities, and connecting creators through development, marketing, and investment.
+        </p>
 
-      <p>
-        Chaotic grenade-focused arena experience where
-        the entire server fights in one match.
-      </p>
+        <div class="hero-stats">
+          <div class="stat-mini">
+            <strong>0+</strong>
+            <span>Active Players</span>
+          </div>
 
-      <div class="card-tags">
-        <span>FFA</span>
-        <span>PvP</span>
-        <span>Arena</span>
+          <div class="divider"></div>
+
+          <div class="stat-mini">
+            <strong>0+</strong>
+            <span>Play Sessions</span>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#about">Learn More ›</a>
+          <a class="btn btn-dark" href="#contact">Get Started</a>
+        </div>
+      </section>
+
+      <section class="hero-showcase" aria-label="Featured games">
+
+        <div class="slide active-slide">
+          <img src="assets/letmebake.png" alt="Let Me Bake">
+
+          <div class="game-info">
+            <div class="project-status soon">COMING SOON</div>
+            <h3>LET ME BAKE</h3>
+          
+
+            <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">
+              Join Discord ›
+            </a>
+          </div>
+        </div>
+
+
+        <div class="slide active-slide">
+          <img src="assets/animeauras.webp" alt="Anime Aurases">
+
+          <div class="game-info">
+            <div class="LIVE">LIVE</div>
+            <h3>ANIME AURAS RNG</h3>
+  
+            <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">
+              <a class="hero-roblox-btn" href="https://www.roblox.com/games/16752849492/Anime-Auras-RNG" target="_blank"></a>
+              Join Discord ›
+              Join Roblox ›
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="assets/grenade.png" alt="Grenade Battles">
+
+          <div class="game-info">
+            <div class="project-status development">IN DEVELOPMENT</div>
+            <h3>GRENADE BATTLES</h3>
+           
+
+            <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">
+              Join Discord ›
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="assets/kinoe.png" alt="Demon Slayer">
+
+          <div class="game-info">
+            <div class="project-status development">IN DEVELOPMENT</div>
+            <h3>KINOE</h3>
+              <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">
+                <a class="hero-roblox-btn" href="https://www.roblox.com/games/16752849492/Anime-Auras-RNG" target="_blank"></a>
+              Join Discord ›
+              
+            </a>
+          </div>
+        </div>
+
+        <div class="dots">
+          <button class="dot active" type="button" onclick="setSlide(0)">1</button>
+          <button class="dot" type="button" onclick="setSlide(1)">2</button>
+          <button class="dot" type="button" onclick="setSlide(2)">3</button>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <section class="partners">
+    <div class="container partner-row">
+      <div class="partner-title">Our growing range<br>of Partners</div>
+
+      <div class="logos">
+        <span>ROBLOX</span>
+        <span>QUBIX</span>
+        <span>DARK HORSE</span>
+        <span>FRESHCUT</span>
+        <span>Medal</span>
+        <span>ROBLOX</span>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section id="about" class="section">
+    <div class="container">
 
-<section class="about">
-  <p class="eyebrow purple">ABOUT QUBIX</p>
+      <div class="intro">
+        <h2>We deliver growth, engagement, and success.</h2>
 
-  <h2>Reaching the Next Generation</h2>
+        <p>
+          Qubix is a Roblox development and networking company focused on building high-quality games, growing communities, and supporting creators through project management, marketing, and investment strategy.
+        </p>
 
-  <p>
-    Qubix Interactive is built around organized development, strong branding,
-    professional execution, and community-focused Roblox experiences.
-  </p>
-</section>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#contact">Let's Talk ›</a>
+          <a class="btn btn-dark" href="games.html">Experiences</a>
+        </div>
+      </div>
 
-<section id="studio-team" class="team team-purple">
-  <p class="eyebrow purple">OUR LEADERSHIP</p>
+      <div class="ticker">
+        <span>Our Games</span>
+        <span>Our Games</span>
+        <span>Our Games</span>
+        <span>Our Games</span>
+        <span>Our Games</span>
+        <span>Our Games</span>
+      </div>
 
-  <h2>Meet the Studio Team</h2>
+      <div id="experiences" class="game-showcase-grid">
 
-  <div class="team-grid">
-    <div class="team-card">
-      <img src="assets/crazydevss.png" class="profile-pic">
-      <h3>Crazydevss</h3>
-      <span>CEO</span>
-      <p>Leads the overall vision, branding, development direction, and future of Qubix Interactive.</p>
+        <article class="showcase-game">
+          <img src="assets/letmebake-banner.png" alt="Let Me Bake">
 
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/zytixDev" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <div class="showcase-content">
+            <div class="project-status development">IN DEVELOPMENT</div>
+
+            <div class="game-tags">
+              <span>Simulator</span>
+              <span>Cooking</span>
+              <span>Progression</span>
+            </div>
+
+            <h3>Let Me Bake</h3>
+            <p>A cozy baking simulator where players cook, decorate, upgrade gear, and build their dream bakery.</p>
+
+            <a class="btn btn-primary" href="https://discord.gg/YOURSERVER" target="_blank">
+              Join Discord ›
+            </a>
+          </div>
+        </article>
+
+        <article class="showcase-game">
+          <img src="assets/grenade-banner.png" alt="Grenade Battles">
+
+          <div class="showcase-content">
+            <div class="project-status development">IN DEVELOPMENT</div>
+
+            <div class="game-tags">
+              <span>PVP</span>
+              <span>Action</span>
+              <span>Competitive</span>
+            </div>
+
+            <h3>Grenade Battles</h3>
+            <p>A fast-paced grenade combat experience with arena-style gameplay and competitive chaos.</p>
+
+            <a class="btn btn-primary" href="https://discord.gg/YOURSERVER" target="_blank">
+              Join Discord ›
+            </a>
+          </div>
+        </article>
+
+        <article class="showcase-game">
+          <img src="assets/kinoe-banner.png" alt="Kinoe">
+
+          <div class="showcase-content">
+            <div class="project-status soon">COMING SOON</div>
+
+            <div class="game-tags">
+              <span>Anime</span>
+              <span>Adventure</span>
+              <span>Story</span>
+            </div>
+
+            <h3>Kinoe</h3>
+            <p>An upcoming Roblox experience by United Studios, built with cinematic gameplay and immersive progression.</p>
+
+            <a class="btn btn-primary" href="https://discord.gg/YOURSERVER" target="_blank">
+              Join Discord ›
+            </a>
+          </div>
+        </article>
+
+        <article id="contact" class="showcase-game cta-game">
+          <img src="assets/logo.png" alt="Qubix">
+
+          <div class="showcase-content">
+            <div class="brand contact-brand">
+              <div class="brand-mark">Q</div>
+              <span>Qubix</span>
+            </div>
+
+            <h3>Looking to work with us?</h3>
+            <p>We're looking for developers, investors, and creators to join the Qubix network.</p>
+
+            <a class="btn btn-primary" href="mailto:devsfactory12@gmail.com">
+              Contact Us ›
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
+  </section>
 
-    <div class="team-card">
-      <img src="assets/zytixdev.png" class="profile-pic">
-      <h3>ZytixDev</h3>
-      <span>Co-Founder</span>
-      <p>Helps lead the vision and growth of Qubix Interactive while overseeing studio direction and partnerships.</p>
+  <footer>
+    <div class="container">
 
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/Crazydevss_" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <div class="footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <div class="brand-mark">Q</div>
+            <span>Qubix</span>
+          </div>
+
+          <p>Unleashing a new era of Roblox experiences. Building immersive worlds played by millions.</p>
+
+          <div class="footer-socials">
+            <a class="icon-link" href="#">𝕏</a>
+            <a class="icon-link" href="#">◆</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Navigation</div>
+
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Company</div>
+
+          <div class="footer-links">
+            <a href="#">Careers</a>
+            <a href="#">Partners</a>
+            <a href="#about">About</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Get In Touch</div>
+          <p>Interested in working with us? We'd love to hear from you.</p>
+
+          <a class="btn btn-primary footer-btn" href="mailto:devsfactory12@gmail.com">
+            Contact Us ›
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="team-card">
-      <img src="assets/hyper.png" class="profile-pic">
-      <h3>Hyper</h3>
-      <span>Executive Director</span>
-      <p>Oversees high-level decisions, studio growth, partnerships, and execution.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/1602172915/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/YOURUSERNAME" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <div class="copyright">
+        <span>© 2026 Qubix Interactive. All rights reserved.</span>
+        <span>Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Service</span>
       </div>
+
     </div>
+  </footer>
 
-    <div class="team-card">
-      <img src="assets/do_zenith.png" class="profile-pic">
-      <h3>Do_Zenith</h3>
-      <span>Studio Manager</span>
-      <p>Manages studio operations, project structure, communication, and workflow.</p>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
 
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/5388619183/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/IndonesiaR83775" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
+    let currentSlide = 0;
 
-   <div class="team-card">
-      <img src="assets/open.png" class="profile-pic">
-      <h3>Open Position</h3>
-      <span>Operations Lead</span>
-      <p>Handles internal systems, team coordination, task management, deadlines, and overall studio workflow.</p>
-    </div>
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active-slide", index === currentSlide);
+        dots[index].classList.toggle("active", index === currentSlide);
+      });
+    }
 
-    <div class="team-card">
-      <img src="assets/SixReapers.webp" class="profile-pic">
-      <h3>SixReapers</h3>
-      <span>Community Director</span>
-      <p>Leads community growth, engagement, announcements, events, and public relations.</p>
-    </div>
-  </div>
-</section>
+    function setSlide(index) {
+      currentSlide = index;
+      updateSlides();
+    }
 
-<section id="development-team" class="team team-blue">
-  <p class="eyebrow Green">OUR DEVELOPMENT TEAM</p>
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlides();
+    }, 3500);
 
-  <h2>Meet the Development Team</h2>
-
-
-   <div class="team-grid">
-    <div class="team-card">
-      <img src="assets/Do_zenith.png" class="profile-pic">
-      <h3>Do_Zenith</h3>
-      <span>Let me bake Programmer</span>
-      <p>Responsible for developing and maintaining gameplay systems, mechanics, optimization, and technical features for Let Me Bake while working alongside the development team to bring the experience to life.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/zytixDev" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/zytixdev.png" class="profile-pic">
-      <h3>ZytixDev</h3>
-      <span>Let Me Bake Programmer</span>
-      <p>Responsible for developing and maintaining gameplay systems, mechanics, optimization, and technical features for Let Me Bake while working alongside the development team to bring the experience to life.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/Crazydevss_" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/crazydevss.png" class="profile-pic">
-      <h3>CrazyDevs</h3>
-      <span>Let Me Bake Programmer/ Game Designer</span>
-      <p>Responsible for developing and maintaining gameplay systems, mechanics, optimization, and technical features for Let Me Bake while working alongside the development team to bring the experience to life.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/Crazydevss_" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/h.8tred.png" class="profile-pic">
-      <h3>⸸ 憎しみ⸸</h3>
-      <span>Game Designer</span>
-      <p>Responsible for designing gameplay concepts, progression systems, mechanics, features, and overall player experience across all Qubix Interactive projects while helping shape the creative direction and long-term vision of each game.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/1602172915/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/YOURUSERNAME" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/boxwood.png" class="profile-pic">
-      <h3>BoxWood</h3>
-      <span>UI/UX Designer</span>
-      <p>Designs and implements user interfaces and experiences for Qubix Interactive games.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/5388619183/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/IndonesiaR83775" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/mart.webp" class="profile-pic">
-      <h3>Mark.</h3>
-      <span>Artist</span>
-      <p>Responsible for creating high-quality artwork, concept art, textures, icons, thumbnails, and visual designs across all Qubix Interactive projects while helping shape the creative identity and overall style of each experience.</p>
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/5388619183/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/IndonesiaR83775" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/FallenSecrets.png" class="profile-pic">
-      <h3>FallenSecrets</h3>
-      <span>Animator</span>
-      <p>Responsible for creating high-quality animations for characters.</p>
-    </div>
-
-    <div class="team-card">
-      <img src="assets/maki.png" class="profile-pic">
-      <h3>maki</h3>
-      <span>3D Artist/Builder</span>
-      <p>Created 3D models and maps for Headshot.</p>
-
-
-      <div class="socials">
-        <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://roblox.com/users/5388619183/profile" target="_blank"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/IndonesiaR83775" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="cta">
-  <p class="eyebrow purple">JOIN THE REVOLUTION</p>
-
-  <h2>Connect With Qubix</h2>
-
-  <p>
-    Join our community and stay updated on the latest releases,
-    projects, and opportunities.
-  </p>
-
-  <a href="https://discord.gg/YOURINVITE" target="_blank" class="btn primary">
-    Join Discord
-  </a>
-</section>
-
-<footer id="contact">
-  <div>
-    <h3>QUBIX INTERACTIVE</h3>
-    <p>Building the next generation of interactive Roblox experiences.</p>
-  </div>
-
-  <div class="footer-links">
-    <a href="https://discord.gg/YOURINVITE" target="_blank"><i class="fab fa-discord"></i></a>
-    <a href="https://www.roblox.com/groups/YOURGROUPID" target="_blank"><i class="fas fa-cube"></i></a>
-    <a href="https://x.com/YOURUSERNAME" target="_blank"><i class="fab fa-x-twitter"></i></a>
-  </div>
-
-  <p class="copyright">© 2026 Qubix Interactive. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+    updateSlides();
+  </script>
 </body>
 </html>
