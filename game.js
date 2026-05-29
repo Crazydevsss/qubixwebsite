@@ -17,35 +17,24 @@ const games = [
     image: "assets/animeauras.webp",
     status: "live",
     statusText: "Live",
-    ccu: "0",
-    visits: "226",
-    universeId: "18284485835",
-    robloxUrl: "https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County",
+    ccu: "Loading...",
+    visits: "Loading...",
+    placeId: "17625359962",
+    robloxUrl: "https://www.roblox.com/games/17625359962/RIVALS",
     discordUrl: "https://discord.gg/YOURSERVER"
   },
 
   {
-    name: "Grenade Battles",
-    description: "Fast-paced arena combat with explosive PvP chaos.",
+    name: "Grendade battles",
+    description: "A live anime-inspired RNG aura experience with collection, rarity, and progression.",
     image: "assets/grenade.png",
-    status: "development",
+    status: "Development",
     statusText: "In Development",
-    ccu: "0",
-    visits: "0",
-    robloxUrl: "https://www.roblox.com/",
-    discordUrl: "https://discord.gg/YOURSERVER"
-  },
-
-  {
-    name: "Kinoe",
-    description: "An upcoming anime-inspired Roblox experience.",
-    image: "assets/kinoe.png",
-    status: "development",
-    statusText: "In Development",
-    ccu: "0",
-    visits: "0",
-    robloxUrl: "https://www.roblox.com/",
-    discordUrl: "https://discord.gg/YOURSERVER"
+    ccu: "Loading...",
+    visits: "Loading...",
+    placeId: "77575642698866",
+    robloxUrl: "https://www.roblox.com/games/77575642698866/Grendade-Battles",
+    discordUrl: "https://discord.gg/gJ4rCEnwcq"
   }
 ];
 
@@ -53,12 +42,10 @@ const gamesGrid = document.getElementById("gamesGrid");
 
 function formatNumber(num) {
   const number = Number(num);
-
   if (Number.isNaN(number)) return String(num);
   if (number >= 1_000_000_000) return (number / 1_000_000_000).toFixed(1) + "B";
   if (number >= 1_000_000) return (number / 1_000_000).toFixed(1) + "M";
   if (number >= 1_000) return number.toLocaleString();
-
   return number.toString();
 }
 
@@ -79,12 +66,12 @@ function renderGames() {
         <div class="stats">
           <div>
             <span>Live Players</span>
-            <strong data-ccu="${index}">${formatNumber(game.ccu)}</strong>
+            <strong data-ccu="${index}">${game.ccu}</strong>
           </div>
 
           <div>
             <span>Visits</span>
-            <strong data-visits="${index}">${formatNumber(game.visits)}</strong>
+            <strong data-visits="${index}">${game.visits}</strong>
           </div>
         </div>
 
@@ -102,37 +89,63 @@ function renderGames() {
   `).join("");
 }
 
+function animateNumber(element, start, end, duration = 1200) {
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const progress = Math.min((currentTime - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(start + (end - start) * eased);
+
+    element.textContent = formatNumber(current);
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
 async function updateRobloxStats() {
-  const liveGames = games.filter(game => game.universeId);
+  for (let i = 0; i < games.length; i++) {
+    const game = games[i];
 
-  if (liveGames.length === 0) return;
+    const ccuElement = document.querySelector(`[data-ccu="${i}"]`);
+    const visitsElement = document.querySelector(`[data-visits="${i}"]`);
 
-  try {
-    const universeIds = liveGames.map(game => game.universeId).join(",");
+    if (!game.placeId) {
+      ccuElement.textContent = formatNumber(game.ccu);
+      visitsElement.textContent = formatNumber(game.visits);
+      continue;
+    }
 
-    const response = await fetch(
-      `https://games.roproxy.com/v1/games?universeIds=${universeIds}`
-    );
+    try {
+      const universeResponse = await fetch(
+        `https://apis.roproxy.com/universes/v1/places/${game.placeId}/universe`
+      );
 
-    const result = await response.json();
+      const universeData = await universeResponse.json();
 
-    result.data.forEach(gameData => {
-      const index = games.findIndex(game => String(game.universeId) === String(gameData.id));
+      const statsResponse = await fetch(
+        `https://games.roproxy.com/v1/games?universeIds=${universeData.universeId}`
+      );
 
-      if (index === -1) return;
+      const statsData = await statsResponse.json();
+      const info = statsData.data[0];
 
-      const ccuElement = document.querySelector(`[data-ccu="${index}"]`);
-      const visitsElement = document.querySelector(`[data-visits="${index}"]`);
+      animateNumber(ccuElement, 0, info.playing, 900);
+animateNumber(visitsElement, 0, info.visits, 1400);
 
-      if (ccuElement) ccuElement.textContent = formatNumber(gameData.playing);
-      if (visitsElement) visitsElement.textContent = formatNumber(gameData.visits);
-    });
+    } catch (error) {
+      console.error("Roblox stats failed:", error);
 
-  } catch (error) {
-    console.warn("Roblox live stats failed. Showing fallback numbers.");
+      ccuElement.textContent = "0";
+      visitsElement.textContent = "0";
+    }
   }
 }
 
 renderGames();
 updateRobloxStats();
-setInterval(updateRobloxStats, 60000);
+setInterval(updateRobloxStats, 20000);
