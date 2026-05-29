@@ -12,15 +12,15 @@ const games = [
   },
 
   {
-    name: "Anime Auras RNG",
+    name: "Project Rng",
     description: "A live anime-inspired RNG aura experience with collection, rarity, and progression.",
     image: "assets/animeauras.webp",
     status: "live",
     statusText: "Live",
     ccu: "Loading...",
     visits: "Loading...",
-    placeId: "17625359962",
-    robloxUrl: "https://www.roblox.com/games/17625359962/RIVALS",
+    placeId: "16662374622",
+    robloxUrl: "https://www.roblox.com/games/16662374622/Project-RNG",
     discordUrl: "https://discord.gg/YOURSERVER"
   },
 
