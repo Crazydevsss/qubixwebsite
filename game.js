@@ -19,7 +19,7 @@ const games = [
     statusText: "Live",
     ccu: "Loading...",
     visits: "Loading...",
-    placeId: "16662374622",
+    placeId: "16662374622", 
     robloxUrl: "https://www.roblox.com/games/16662374622/Project-RNG",
     discordUrl: "https://discord.gg/YOURSERVER"
   },
