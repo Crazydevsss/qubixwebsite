@@ -1,13 +1,14 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/blog", "destination": "/blogs.html" },
     { "source": "/projects", "destination": "/projects.html" },
+    { "source": "/blogs", "destination": "/blogs.html" },
+    { "source": "/blog", "destination": "/blogs.html" },
     { "source": "/about", "destination": "/about.html" },
     { "source": "/join", "destination": "/join.html" },
 
-    { "source": "/Blogs/letmebakeblog", "destination": "/blogs/letmebakeblog.html" },
-    { "source": "/Blogs/kinoeblog", "destination": "/blogs/kinoeblog.html" },
-    { "source": "/Blogs/grenadebattlesblog", "destination": "/blogs/grenadebattlesblog.html" }
+    { "source": "/blogs/letmebakeblog", "destination": "/blogs/letmebakeblog.html" },
+    { "source": "/blogs/kinoeblog", "destination": "/blogs/kinoeblog.html" },
+    { "source": "/blogs/grenadebattlesblog", "destination": "/blogs/grenadebattlesblog.html" }
   ]
 }
