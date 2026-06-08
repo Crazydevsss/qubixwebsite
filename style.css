@@ -658,3 +658,108 @@ footer {
   line-height: 1.6;
   font-weight: 650;
 }
+.join-roles {
+  padding: 40px 0 110px;
+}
+
+.join-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.join-role-card {
+  position: relative;
+  min-height: 330px;
+  padding: 34px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  background: #0b0b0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: .3s ease;
+}
+
+.join-role-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  opacity: .28;
+  filter: brightness(.6) saturate(1.1);
+  transition: .35s ease;
+}
+
+.join-role-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.9)),
+    radial-gradient(circle at top right, rgba(124,58,237,.28), transparent 38%);
+}
+
+.join-role-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(168,85,247,.45);
+  box-shadow: 0 30px 90px rgba(124,58,237,.18);
+}
+
+.join-role-card:hover::before {
+  opacity: .4;
+  transform: scale(1.06);
+}
+
+.join-role-card span,
+.join-role-card h3,
+.join-role-card p,
+.join-role-card a {
+  position: relative;
+  z-index: 2;
+}
+
+.join-role-card span {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(124,58,237,.28);
+  border: 1px solid rgba(168,85,247,.38);
+  display: grid;
+  place-items: center;
+  color: #b884ff;
+  font-weight: 950;
+  margin-bottom: auto;
+}
+
+.join-role-card h3 {
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -.04em;
+  margin-bottom: 14px;
+}
+
+.join-role-card p {
+  color: rgba(255,255,255,.68);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.join-role-card a {
+  margin-top: 22px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .join-role-grid {
+    grid-template-columns: 1fr;
+  }
+}
