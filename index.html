@@ -8,274 +8,217 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <div class="dev-pill">🚧 Website In Development</div>
+
   <nav class="nav">
-    <a class="brand" href="#home">
-      <img class="brand-logo" src="assets/logo.png" alt="Qubix Logo">
+    <a class="brand" href="/">
+      <img src="assets/logo.png" alt="Qubix Logo">
       <span>Qubix</span>
     </a>
 
     <div class="nav-links">
-      <a class="active" href="#home">Home</a>
-      <a href="#network">Network</a>
+      <a class="active" href="/">Home</a>
       <a href="/projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="#join">Join</a>
     </div>
 
-    <div class="nav-actions">
-      <a class="icon-link" href="#">𝕏</a>
-      <a class="icon-link" href="#">◆</a>
-      <a class="btn btn-primary" href="#contact">Join Us ›</a>
-    </div>
+    <a class="nav-btn" href="#join">Work With Us ›</a>
   </nav>
 
-  <main id="home" class="hero">
-    <div class="container hero-content">
-      <section class="hero-text">
-        <div class="eyebrow">Qubix Interactive</div>
+  <header class="hero">
+    <div class="hero-bg"></div>
 
-       <h1>
-Building The Future<br>
-Of Roblox.
-</h1>
+    <div class="container hero-inner">
+      <p class="eyebrow">QUBIX INTERACTIVE</p>
 
-        <p>
-          Qubix Interactive builds, manages, markets, and connects Roblox experiences through development, networking, community growth, and investment support.
-        </p>
+      <h1>Building The Next Generation Of Roblox.</h1>
 
-        <div class="hero-stats">
-          <div class="stat-mini">
-            <strong>4+</strong>
-            <span>Active Projects</span>
-          </div>
+      <p class="hero-text">
+        Qubix Interactive develops, manages, and supports Roblox experiences through production,
+        branding, community growth, and creator partnerships.
+      </p>
 
-          <div class="divider"></div>
+      <div class="hero-actions">
+        <a class="btn primary" href="/projects">View Projects</a>
+        <a class="btn secondary" href="#about">Learn More</a>
+      </div>
 
-          <div class="stat-mini">
-            <strong>1</strong>
-            <span>Live Experience</span>
-          </div>
+      <div class="stats">
 
-          <div class="divider"></div>
+  <div>
+   <strong id="totalVisits">0</strong>
+    <span>TOTAL VISITS</span>
+  </div>
 
-          <div class="stat-mini">
-            <strong>1.4B+</strong>
-            <span>Portfolio Visits</span>
-          </div>
-        </div>
+  <div>
+    <strong id="livePlayers">0</strong>
+    <span>LIVE CCU</span>
+  </div>
 
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#network">Learn More ›</a>
-          <a class="btn btn-dark" href="games.html">View Projects</a>
-        </div>
-      </section>
+  <div>
+    <strong>3</strong>
+    <span>ACTIVE PROJECTS</span>
 
-      <section class="hero-showcase" aria-label="Featured games">
-        <div class="slide active-slide">
-          <img src="assets/animeauras.webp" alt="Anime Auras RNG">
-          <div class="game-info">
-            <div class="project-status live">LIVE</div>
-            <h3>ANIME AURAS RNG</h3>
-            <div class="slide-actions">
-              <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">Discord ›</a>
-              <a class="hero-roblox-btn" href="https://www.roblox.com/games/16752849492/Anime-Auras-RNG" target="_blank">Roblox ›</a>
-            </div>
-          </div>
-        </div>
+  </div>
+  <div>
+    <strong>4</strong>
+    <span>DEVELOPMENT PROJECTS</span>
+  </div>
 
-        <div class="slide">
+  <div>
+    <strong>10+</strong>
+    <span>STUDIO DEVELOPERS</span>
+  </div>
+  <div>
+    <strong id="liveGroupmembers">0</strong>
+    <span>GROUP MEMBERS</span>
+  </div>
+
+</div>
+
+  <section class="projects-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">OUR PROJECTS</p>
+        <h2>Experiences currently being built.</h2>
+        <p>Our lineup focuses on polished Roblox games with strong identity, clean systems, and long-term community potential.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
           <img src="assets/letmebake.png" alt="Let Me Bake">
-          <div class="game-info">
-            <div class="project-status soon">COMING SOON</div>
-            <h3>LET ME BAKE</h3>
-            <div class="slide-actions">
-              <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">Discord ›</a>
-              <a class="hero-roblox-btn" href="games.html">Details ›</a>
-            </div>
+          <div class="project-shade"></div>
+          <div class="project-info">
+            <span class="tag soon">Coming Soon</span>
+            <h3>Let Me Bake</h3>
+            <p>A cozy baking simulator focused on cooking, decorating, upgrades, and progression.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="slide">
+        <article class="project-card">
+          <img src="assets/kinoe.png" alt="Kinoe">
+          <div class="project-shade"></div>
+          <div class="project-info">
+            <span class="tag dev">In Development</span>
+            <h3>Kinoe</h3>
+            <p>An anime-inspired Roblox RPG built around cinematic combat and progression.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
           <img src="assets/grenade.png" alt="Grenade Battles">
-          <div class="game-info">
-            <div class="project-status development">IN DEVELOPMENT</div>
-            <h3>GRENADE BATTLES</h3>
-            <div class="slide-actions">
-              <a class="hero-discord-btn" href="https://discord.gg/YOURSERVER" target="_blank">Discord ›</a>
-              <a class="hero-roblox-btn" href="games.html">Details ›</a>
-            </div>
+          <div class="project-shade"></div>
+          <div class="project-info">
+            <span class="tag dev">In Development</span>
+            <h3>Grenade Battles</h3>
+            <p>A fast-paced arena combat game built around explosive PvP chaos.</p>
           </div>
-        </div>
-
-        <div class="dots">
-          <button class="dot active" type="button" onclick="setSlide(0)">1</button>
-          <button class="dot" type="button" onclick="setSlide(1)">2</button>
-          <button class="dot" type="button" onclick="setSlide(2)">3</button>
-        </div>
-      </section>
+        </article>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <section id="network" class="network-section">
-    <div class="container">
-      <div class="section-header">
-        <span>WHAT WE DO</span>
-        <h2>More Than A Studio.</h2>
-        <p>
-          Qubix connects developers, investors, communities, and Roblox experiences into one ecosystem built for growth.
-        </p>
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">ABOUT QUBIX</p>
+        <h2>A Roblox studio built around structure, quality, and growth.</h2>
       </div>
 
+      <div class="about-copy">
+        <p>
+          Qubix Interactive helps Roblox projects become more organized, professional, and launch-ready through development support, project management, branding, marketing, and community strategy.
+        </p>
+
+        <p>
+          We focus on building serious projects with clear direction, clean presentation, and long-term potential.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
       <div class="service-grid">
-        <div class="service-card">
-          <i class="fa-solid fa-code"></i>
-          <h3>Development</h3>
-          <p>Game systems, scripting, UI, VFX, animation, and full production management.</p>
-        </div>
+        <article class="service-card">
+          <span>01</span>
+          <h3>Game Development</h3>
+          <p>Systems, scripting, UI, gameplay planning, and production support.</p>
+        </article>
 
-        <div class="service-card">
-          <i class="fa-solid fa-users"></i>
-          <h3>Networking</h3>
-          <p>Connecting creators, studios, investors, and communities with the right opportunities.</p>
-        </div>
+        <article class="service-card">
+          <span>02</span>
+          <h3>Project Management</h3>
+          <p>Task planning, team organization, updates, deadlines, and launch structure.</p>
+        </article>
 
-        <div class="service-card">
-          <i class="fa-solid fa-bullhorn"></i>
-          <h3>Marketing</h3>
-          <p>Community growth, creator outreach, brand strategy, and launch planning.</p>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-chart-line"></i>
-          <h3>Investment Soon!</h3>
-          <p>Helping promising Roblox projects structure funding, partnerships, and growth plans.</p>
-        </div>
+        <article class="service-card">
+          <span>03</span>
+          <h3>Marketing & Growth</h3>
+          <p>Brand positioning, community growth, creator outreach, and release strategy.</p>
+        </article>
       </div>
     </div>
   </section>
-
-  <section class="why-section">
+ <section class="join-section" id="join">
     <div class="container">
-      <div class="why-header">
-        <h2>Industry leading knowledge,<br>cutting-edge technique.</h2>
-        <p>
-          Backed by developers, artists, managers, and digital creatives, Qubix builds experiences designed to grow communities and scale.
-        </p>
-      </div>
+      <div class="join-card">
+        <p class="eyebrow">WORK WITH QUBIX</p>
+        <h2>Ready to build something serious?</h2>
+        <p>Developers, investors, studio owners, and creators can contact us to work on future Roblox projects.</p>
 
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">✓</div>
-          <h3>Amplify Your Brand</h3>
-          <p>We help Roblox projects grow through branding, marketing, community strategy, and creator networking.</p>
+        <div class="join-actions">
+          <a class="btn primary" href="mailto:devsfactory12@gmail.com">Contact Us ›</a>
+          <a class="btn secondary" href="/projects">View Projects</a>
         </div>
-
-        <div class="why-card">
-          <div class="why-icon">🚀</div>
-          <h3>Quality Assured</h3>
-          <p>From planning to launch, we focus on structured production, clean development, and polished execution.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">★</div>
-          <h3>People, Not Robots</h3>
-          <p>We work directly with developers, investors, and creators to build real relationships around every project.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div>
-          <span>JOIN THE NETWORK</span>
-          <h2>Build Something Bigger With Qubix.</h2>
-          <p>
-            Whether you're a developer, investor, studio owner, or community leader, we're always looking for people ready to build serious Roblox projects.
-          </p>
-          <a class="btn btn-primary" href="mailto:devsfactory12@gmail.com">Contact Us ›</a>
-        </div>
-
-        <img src="assets/logo.png" alt="Qubix Logo">
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand footer-brand">
-            <img class="brand-logo" src="assets/logo.png" alt="Qubix Logo">
-            <span>Qubix</span>
-          </div>
-          <p>Building Roblox games, communities, and opportunities.</p>
-
-          <div class="footer-socials">
-            <a class="icon-link" href="#">𝕏</a>
-            <a class="icon-link" href="#">◆</a>
-          </div>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Qubix Logo">
+          <strong>Qubix</strong>
         </div>
-
-        <div>
-          <div class="footer-title">Navigation</div>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">Company</div>
-          <div class="footer-links">
-            <a href="#network">Network</a>
-            <a href="#">Careers</a>
-            <a href="#">Partners</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">Get In Touch</div>
-          <p>Interested in working with us? We'd love to hear from you.</p>
-          <a class="btn btn-primary footer-btn" href="mailto:devsfactory12@gmail.com">Contact Us ›</a>
-        </div>
+        <p>Building Roblox experiences through development, management, and growth.</p>
       </div>
 
-      <div class="copyright">
-        <span>© 2026 Qubix Interactive. All rights reserved.</span>
-        <span>Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Service</span>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
       </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="#join">Join</a>
+        <a href="#">Careers</a>
+        <a href="#">Partners</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>devsfactory12@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © 2026 Qubix Interactive. All rights reserved.
     </div>
   </footer>
 
-  <script>
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-
-    let currentSlide = 0;
-
-    function updateSlides() {
-      slides.forEach((slide, index) => {
-        slide.classList.toggle("active-slide", index === currentSlide);
-        dots[index].classList.toggle("active", index === currentSlide);
-      });
-    }
-
-    function setSlide(index) {
-      currentSlide = index;
-      updateSlides();
-    }
-
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlides();
-    }, 3500);
-
-    updateSlides();
-  </script>
+<script src="script.js"></script>
 </body>
 </html>

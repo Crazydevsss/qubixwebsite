@@ -1,9 +1,17 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/projects",
-      "destination": "/games.html"
-    }
+    { "source": "/projects", "destination": "/projects.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/join", "destination": "/join.html" },
+
+    { "source": "/Blogs/letmebakeblog", "destination": "/Blogs/letmebakeblog.html" },
+    { "source": "/Blogs/kinoeblog", "destination": "/Blogs/kinoeblog.html" },
+    { "source": "/Blogs/grenadebattlesblog", "destination": "/Blogs/grenadebattlesblog.html" },
+
+    { "source": "/projects/letmebake", "destination": "/projects/letmebake.html" },
+    { "source": "/projects/kinoe", "destination": "/projects/kinoe.html" },
+    { "source": "/projects/grenadebattles", "destination": "/projects/grenadebattles.html" }
   ]
 }
